@@ -1,0 +1,33 @@
+{
+  "name": "ebac-k6-tests",
+  "version": "1.0.0",
+  "description": "Projeto exercício utilizando K6",
+  "homepage": "https://github.com/danimaleski/ebac-k6-tests#readme",
+  "bugs": {
+    "url": "https://github.com/danimaleski/ebac-k6-tests/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danimaleski/ebac-k6-tests.git"
+  },
+  "license": "ISC",
+  "author": "daniellamaleski",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "webpack",
+    "test": "k6 run dist/user.test.js"
+  },
+  "dependencies": {
+    "@types/k6": "^1.2.0",
+    "webpack": "^5.101.2",
+    "webpack-cli": "^6.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "babel-loader": "^10.0.0",
+    "core-js": "^3.45.0",
+    "dotenv": "^17.2.1"
+  }
+}
