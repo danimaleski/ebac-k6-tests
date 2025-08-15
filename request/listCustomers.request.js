@@ -3,9 +3,9 @@ import { check } from 'k6';
 import Utils from '../utils/utils'; 
 
 export default class listCustomers {
-    // Enviar a requisição GET para listar os produtos
+    // Enviar a requisição GET para listar os clientes
     list(token) {
-        const response = http.get(`${Utils.getBaseUrl()}/api/products`, {
+        const response = http.get(`${Utils.getBaseUrl()}/api/customers`, {
         headers: {
             "Authorization": `Bearer ${token}`, 
             "Accept": "application/json",
