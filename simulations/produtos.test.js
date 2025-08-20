@@ -15,9 +15,11 @@ import data from '../data/usuarios.json';
 // }
 
 export default function () {
-    const login = new Login();
+    let login = new Login();
 
-    login.access(data.usuarioOk.user, data.usuarioOk.pass);
+    group('login and get token', () => {
+        login.access(data.usuarioOk.user, data.usuarioOk.pass)
+     })
 
     login.addProduct();
 }

@@ -16,7 +16,9 @@
   "main": "index.js",
   "scripts": {
     "pretest": "webpack",
-    "test": "k6 run dist/user.test.js"
+    "test": "k6 run dist/user.test.js",
+    "k6:run": "k6 run webpack.config.js",
+    "k6:smoke": "k6 run webpack.config.js"
   },
   "dependencies": {
     "@types/k6": "^1.2.0",
@@ -24,9 +26,6 @@
     "webpack-cli": "^6.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.3",
-    "@babel/preset-env": "^7.28.3",
-    "babel-loader": "^10.0.0",
     "core-js": "^3.45.0",
     "dotenv": "^17.2.1"
   }

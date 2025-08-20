@@ -5,7 +5,11 @@ const path = require('path');
 module.exports = {
   mode: 'production',
   entry: {
-    user: './simulations/user.test.js'
+    user: './simulations/user.test.js',
+    user: './simulations/produtos.test.js',
+    user: './simulations/clientes.test.js',
+    user: './simulations/listProducts.test.js',
+    user: './simulations/listaClientes.test.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -17,21 +21,7 @@ module.exports = {
         { 
             test: /\.js$/, 
             exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                    presets: [
-                        [
-                            '@babel/preset-env',
-                        {
-                            useBuiltIns: 'usage',
-                            corejs: 3,
-                        },
-                        ],
-                    ],
-                sourceType: 'module',
-                },
-            }
+            type: 'asset/resource',
         }   ],
   },
   target: 'web',
